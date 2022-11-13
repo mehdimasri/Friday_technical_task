@@ -1,0 +1,1 @@
+# Friday_technical_task
