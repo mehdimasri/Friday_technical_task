@@ -34,10 +34,7 @@ def removing_non_alphabetic_char(addr:str)->str:
 def string_to_json(addr:str)->dict:
     # removing cleaning the string from unwanted characters
     addr = removing_non_alphabetic_char(addr)
-    # removing No,N°,no, number,num,Number,nummer,Nummer
-    list_of_unwanted_words = [" No "," N° "," no "," number "," nummer "," Nummer ",' num '," Num " ]
-    for item in list_of_unwanted_words:
-        addr = addr.replace(item,'')
+
 
     #checking simple scenario
     if len(addr.split())==2:
@@ -61,7 +58,7 @@ def string_to_json(addr:str)->dict:
     tmp_list = addr.split()
     for i in range(0,len(tmp_list)):
         # search for number
-        if re.match(pattern='^[0-9]',string=tmp_list[i]):
+        if re.match(pattern='^[0-9]',string=tmp_list[i]) or  re.match('[A-Za-z]{1,2}[0-9]',tmp_list[i]):
             number_index = i
     tmp_dict = {}
     #split string into two the street name should be taller in number of characters
