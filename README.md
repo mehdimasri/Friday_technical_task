@@ -13,3 +13,5 @@ The project contains two python files. The functions.py contains all the necessa
   
   
   
+No need to install any python packages
+Run main.py code will print results on the stdout terminal.
