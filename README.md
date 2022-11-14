@@ -6,4 +6,10 @@ The project contains two python files. The functions.py contains all the necessa
  - The street name has more alphabetic letter than the housename
  - The string will only contain street name and house name
  
- 
+ ## steps in processing
+  - removing un wanted characters like (,!,? etc
+  - checking for simple scenarios where the string contains only two words seperated by space or comma
+  - in more complexe cases we check for the presons of the number and we use it to determine the house number by looking at the substring before and after the number the street name should contain more alpahabetic characters
+  
+  
+  
